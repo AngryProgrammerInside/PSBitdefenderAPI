@@ -1,4 +1,4 @@
-function SetBitdefenderAPIKey {
+function Set-BitdefenderAPIKey {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]

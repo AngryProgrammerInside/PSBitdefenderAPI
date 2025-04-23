@@ -9,7 +9,7 @@ function GetBitdefenderPoliciesList {
 
     $Options.policyId = $PolicyID
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPolicyDetails" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPolicyDetails" -Options $Options
 
     return $ret   
 }

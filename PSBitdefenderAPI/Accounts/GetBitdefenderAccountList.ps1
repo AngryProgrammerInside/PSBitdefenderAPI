@@ -1,4 +1,4 @@
-function GetBitdefenderAccountList {
+function Get-BitdefenderAccountList {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
@@ -17,7 +17,7 @@ function GetBitdefenderAccountList {
     if ($Page) { $Options.page = $Page }
     if ($Page) { $Options.perPage = $PerPage }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "getAccountList" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDAccountsAPIURI -Method "getAccountsList" -Options $Options
 
     return $ret   
 }

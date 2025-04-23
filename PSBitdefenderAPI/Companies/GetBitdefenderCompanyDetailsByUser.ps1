@@ -1,4 +1,4 @@
-function GetBitdefenderCompanyDetailsByUser {
+function Get-BitdefenderCompanyDetailsByUser {
     [CmdletBInding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -13,7 +13,7 @@ function GetBitdefenderCompanyDetailsByUser {
     $Options.username = $Username
     $Options.password = $Password
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetailsByUser" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetailsByUser" -Options $Options
 
     return $ret
 }

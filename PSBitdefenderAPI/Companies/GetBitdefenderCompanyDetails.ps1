@@ -1,4 +1,4 @@
-function GetBitdefenderCompanyDetails {
+function Get-BitdefenderCompanyDetails {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function GetBitdefenderCompanyDetails {
 
     $Options.companyId = $CompanyID
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetails" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "getCompanyDetails" -Options $Options
 
     return $ret
 }

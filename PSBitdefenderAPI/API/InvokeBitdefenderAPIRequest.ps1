@@ -1,4 +1,4 @@
-function InvokeBitdefenderAPIRequest {
+function Invoke-BitdefenderAPIRequest {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$False)]
@@ -21,7 +21,7 @@ function InvokeBitdefenderAPIRequest {
     )
 
     if (!$APIKey) {
-        throw "API Key has not been set. Please use SetBitdefenderAPIKey before calling this function."
+        throw "API Key has not been set. Please use Set-BitdefenderAPIKey before calling this function."
     } else {
         $Auth = "$($APIKey):$($null)"
         $AuthEnc = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($Auth))
@@ -38,7 +38,7 @@ function InvokeBitdefenderAPIRequest {
             params = $Options
         } | ConvertTo-Json
     
-        $Response = Invoke-RestMethod -Method Post -Uri $APIUri -Headers $Headers -Body $Body -ContentType "application/json"
+        $Response = (Invoke-RestMethod -Method Post -Uri $APIUri -Headers $Headers -Body $Body -ContentType "application/json").result
     
         return $Response
     }

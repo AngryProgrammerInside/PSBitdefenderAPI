@@ -69,32 +69,7 @@ Copyright = '(c) Matthew Rebstock. All rights reserved.'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @(
-    'Disable-Company',
-    'Enable-Company',
-    'Get-AccountList',
-    'Get-CompaniesByName',
-    'Get-CompanyDetails',
-    'Get-CompanyDetailsByUser',
-    'Get-InstallationLinks',
-    'Get-LicenseInfo',
-    'Get-MonthlyUsage',
-    'Get-NotificationSettings',
-    'Get-PackagesList',
-    'Get-PoliciesList',
-    'Get-PolicyDetails',
-    'Invoke-APIRequest',
-    'New-Account',
-    'New-Company',
-    'New-Package',
-    'Remove-Account',
-    'Remove-Company',
-    'SetBitdefenderAPIKey',
-    'SetBitdefenderAPIURI',
-    'Set-CompanyDetails',
-    'Set-LicenseKey',
-    'Set-MonthlySubscription'
-)
+FunctionsToExport = '*'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()

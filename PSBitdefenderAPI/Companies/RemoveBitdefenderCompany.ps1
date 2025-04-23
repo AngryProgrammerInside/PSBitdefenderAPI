@@ -9,7 +9,7 @@ function RemoveBitdefenderCompany {
 
     $Options.companyId = $CompanyID   
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "removeCompany" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "removeCompany" -Options $Options
 
     return $ret
 }

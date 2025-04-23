@@ -1,4 +1,4 @@
-function SetBitdefenderAccount {
+function Set-BitdefenderAccount {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -59,7 +59,7 @@ function SetBitdefenderAccount {
     if ($RightsCompanyManager) { $Options.rights.companyManager = $RightsCompanyManager }
     if ($TargetIDs) { $Options.targetIds = $TargetIDs }
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDAccountsAPIURI -Method "updateAccount" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDAccountsAPIURI -Method "updateAccount" -Options $Options
 
     return $ret   
 }

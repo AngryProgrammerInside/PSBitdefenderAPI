@@ -17,7 +17,7 @@ function GetBitdefenderPackagesList {
     if ($Page) { $Options.page = $Page }
     if ($PerPage) { $Options.perPage = $PerPage }
     
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "getPackagesList" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "getPackagesList" -Options $Options
 
     return $ret
 }

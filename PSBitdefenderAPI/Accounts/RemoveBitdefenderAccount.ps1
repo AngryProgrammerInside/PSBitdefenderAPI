@@ -1,4 +1,4 @@
-function RemoveBitdefenderAccount {
+function Remove-BitdefenderAccount {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function RemoveBitdefenderAccount {
 
     $Options.accountId = $AccountID
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "deleteAccount" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "deleteAccount" -Options $Options
 
     return $ret   
 }

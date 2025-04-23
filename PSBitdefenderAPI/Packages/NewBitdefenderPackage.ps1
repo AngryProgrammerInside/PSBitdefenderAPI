@@ -123,7 +123,7 @@ function NewBitdefenderPackage {
     if ($DeploymentProxyUser) { $Options.deploymentOptions.proxyUser = $DeploymentProxyUser }
     if ($DeploymentProxyPassword) { $Options.deploymentOptions.proxyPassword = $DeploymentProxyPassword }
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "createPackage" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDPackagesAPIURI -Method "createPackage" -Options $Options
 
     return $ret
 }

@@ -17,7 +17,7 @@ function GetBitdefenderPoliciesList {
     if ($Page) { $Options.page = $Page }
     if ($Page) { $Options.perPage = $PerPage }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPoliciesList" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDPoliciesAPIURI -Method "getPoliciesList" -Options $Options
 
     return $ret   
 }

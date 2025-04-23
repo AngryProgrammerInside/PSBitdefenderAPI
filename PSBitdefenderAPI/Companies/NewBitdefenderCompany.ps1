@@ -67,7 +67,7 @@ function NewBitdefenderCompany {
     if ($LicenseExchange) { $Options.licenseSubscription.manageExchange = $LicenseExchange }
     if ($LicenseEncryption) { $Options.licenseSubscription.manageEncryption = $LicenseEncryption }
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "createCompany" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "createCompany" -Options $Options
 
     return $ret
 }

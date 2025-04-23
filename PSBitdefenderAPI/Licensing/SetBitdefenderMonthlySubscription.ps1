@@ -1,4 +1,4 @@
-function SetBitdefenderMonthlySubscription {
+function Set-BitdefenderMonthlySubscription {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -22,7 +22,7 @@ function SetBitdefenderMonthlySubscription {
     if ($ManageExchange) { $Options.manageExchange = $ManageExchange }
     if ($ManageEncryption) { $Options.manageEncryption = $ManageEncryption }
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDLicensingAPIURI -Method "setMonthlyEncryption" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDLicensingAPIURI -Method "setMonthlyEncryption" -Options $Options
 
     return $ret   
 }

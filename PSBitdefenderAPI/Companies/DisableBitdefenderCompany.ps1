@@ -13,7 +13,7 @@ function DisableBitdefenderCompany {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "suspendCompany" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "suspendCompany" -Options $Options
 
     return $ret
 }

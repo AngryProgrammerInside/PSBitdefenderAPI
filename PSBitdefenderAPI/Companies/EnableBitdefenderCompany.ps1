@@ -13,7 +13,7 @@ function EnableBitdefenderCompany {
     $Options.companyId = $CompanyID   
     $Options.recursive = $Recurse
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "activateCompany" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "activateCompany" -Options $Options
 
     return $ret
 }

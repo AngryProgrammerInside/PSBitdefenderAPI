@@ -1,4 +1,4 @@
-function GetBitdefenderNotificationSettings {
+function Get-BitdefenderNotificationSettings {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True)]
@@ -9,7 +9,7 @@ function GetBitdefenderNotificationSettings {
 
     if ($AccountID) { $Options.accountId = $AccountID }
 
-    $ret = Invoke-APIRequest -APIUri $Global:BDAccountsAPIURI -Method "getNotificationSettings" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDAccountsAPIURI -Method "getNotificationSettings" -Options $Options
 
     return $ret   
 }

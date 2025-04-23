@@ -24,7 +24,7 @@ function NewBitdefenderCompany {
     if ($Name) { $Options.name = $Name }
     if ($Address) { $Options.address = $Address }
 
-    $ret = InvokeBitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
+    $ret = Invoke-BitdefenderAPIRequest -APIUri $Global:BDCompaniesAPIURI -Method "updateCompanyDetails" -Options $Options
 
     return $ret
 }
